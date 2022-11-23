@@ -3,6 +3,8 @@ const clickMeB = document.querySelector(".clickme");
 
 function clickHandler () {
     alert("Downloading virus...");
+    // clickMeB.removeEventListener("click",clickHandler);
 }
 
-clickMeB.addEventListener("click",clickHandler);
+clickMeB.addEventListener("click",clickHandler,{once:true});
+
