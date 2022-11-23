@@ -19,7 +19,8 @@ function changeText () {
     else {clickMeB.textContent = "Click me";}
 }
 
-function updateImg() {
+function updateImg(ev) {
+    // console.log(ev.target.textContent)
     const missingImg = document.querySelector("#shoppingCart")
     missingImg.setAttribute("src","images/shoppingcart.png")
     missingImg.setAttribute("width","100")
@@ -31,3 +32,21 @@ function updateImg() {
 clickMeB.addEventListener("click",pinkBackground);
 clickMeB.addEventListener("click",changeText);
 clickMeB.addEventListener("click",updateImg);
+
+
+const buttonList = document.querySelector(".button-container")
+
+buttonList.addEventListener("mouseover",greenButton);
+buttonList.addEventListener("click",clickOnButton);
+
+function greenButton(ev) {
+    if (ev.target.tagName === "BUTTON") {
+    ev.target.classList.add("green-background");
+    }
+}
+
+function clickOnButton(ev) {
+    if (ev.target.tagName === "BUTTON") {
+    ev.target.style.color = ev.target.textContent
+    }
+}
