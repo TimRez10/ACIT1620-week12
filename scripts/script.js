@@ -19,6 +19,15 @@ function changeText () {
     else {clickMeB.textContent = "Click me";}
 }
 
-clickMeB.addEventListener("click",pinkBackground);
+function updateImg() {
+    const missingImg = document.querySelector("#shoppingCart")
+    missingImg.setAttribute("src","images/shoppingcart.png")
+    missingImg.setAttribute("width","100")
+    missingImg.setAttribute("height","100")
+    missingImg.setAttribute("alt","Shopping Cart")
+    missingImg.setAttribute("style","float: right")
+}
 
+clickMeB.addEventListener("click",pinkBackground);
 clickMeB.addEventListener("click",changeText);
+clickMeB.addEventListener("click",updateImg);
